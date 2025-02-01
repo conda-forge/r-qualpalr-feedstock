@@ -1,6 +1,5 @@
 {% set version = '0.4.4' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-qualpalr
@@ -13,8 +12,7 @@ source:
   sha256: 2214246a43baf0c2db7e93909dc34ba6746815982957adcbf08deab00f85aa8e
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,7 +43,6 @@ requirements:
     - r-randtoolbox >=1.17
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp
     - r-rcpparmadillo >=0.7.600.1.0
     - r-assertthat
