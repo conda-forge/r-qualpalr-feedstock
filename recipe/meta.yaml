@@ -1,4 +1,4 @@
-{% set version = '0.4.4' %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qualpalr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qualpalr/qualpalr_{{ version }}.tar.gz
-  sha256: 2214246a43baf0c2db7e93909dc34ba6746815982957adcbf08deab00f85aa8e
+  sha256: 5f698408c6b201c8ec91a67e16e756bca226fcae2ca138471354460ca74bb43b
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -56,10 +56,7 @@ test:
 about:
   home: https://jolars.github.io/qualpalr/
   license: GPL-3.0-only
-  summary: Automatic generation of maximally distinct qualitative color palettes, optionally
-    tailored to color deficiency. A list of colors or a subspace of a color space is
-    used as input and then projected to the DIN99d color space, where colors that are
-    maximally distinct are chosen algorithmically.
+  summary: Automatic generation of maximally distinct qualitative color palettes, optionally tailored to color deficiency. A list of colors or a subspace of a color space is used as input and then projected to the DIN99d color space, where colors that are maximally distinct are chosen algorithmically.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
