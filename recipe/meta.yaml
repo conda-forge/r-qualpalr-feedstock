@@ -38,15 +38,9 @@ requirements:
   host:
     - r-base
     - r-rcpp
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-assertthat
-    - r-randtoolbox >=1.17
   run:
     - r-base
     - r-rcpp
-    - r-rcpparmadillo >=0.7.600.1.0
-    - r-assertthat
-    - r-randtoolbox >=1.17
 
 test:
   commands:
