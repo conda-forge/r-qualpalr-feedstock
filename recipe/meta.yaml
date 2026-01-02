@@ -38,6 +38,8 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - llvm-openmp                  # [osx]
+    - libgomp                      # [not osx]
   run:
     - r-base
     - r-rcpp
